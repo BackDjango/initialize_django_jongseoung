@@ -29,18 +29,6 @@ SECRET_KEY = env("SECRET_KEY")
 
 # Application definition
 
-LOCAL_APPS = [
-    "core",
-    "api.models.users",
-    "api.models.boards",
-]
-
-THIRD_PARTY_APPS = [
-    "rest_framework",
-    "rest_framework_simplejwt",
-    "drf_yasg",
-]
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -48,8 +36,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    *THIRD_PARTY_APPS,
-    *LOCAL_APPS,
+    "rest_framework",
+    "rest_framework_simplejwt",
+    "drf_yasg",
+    "core",
+    "users",
+    "boards",
 ]
 
 MIDDLEWARE = [

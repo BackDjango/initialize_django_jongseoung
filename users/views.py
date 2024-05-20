@@ -1,7 +1,7 @@
 from django.contrib.auth.hashers import check_password
 
 from core.tokens import CustomJWTAuthentication
-from api.models.users.models import User
+from users.models import User
 from rest_framework.request import Request
 from rest_framework.views import APIView
 

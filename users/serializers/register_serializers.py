@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 from core.exceptions.service_exceptions import *
 
-from api.models.users.models import User
+from users.models import User
 
 
 class RegisterSerializer(serializers.Serializer):
