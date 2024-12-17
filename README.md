@@ -1,9 +1,14 @@
-# initialize_django_jongseoung
+# initialize_django
 
+</br>
+</br>
+</br>
 <div align="center">
-<img width="340" alt="image" src="이미지">
-<br>
+<img width="340" alt="image" src="https://github.com/user-attachments/assets/b9265f32-8dac-49c1-9a1a-5b034f6d7704">
 </div>
+</br>
+</br>
+</br>
 
 > **이 프로젝트는 Django와 Django REST Framework (DRF)를 커스터마이징하여 자신만의 설정을 구성하는 것을 목표로 합니다.**  
 > **개발 기간: 2024.04 ~ 2024.05**
@@ -40,7 +45,7 @@
 
 1. **커스터마이징된 Django 설정 구현**  
    - 공식 문서나 블로그에서 제공하는 설정을 참고하되, 장단점을 비교하고 자신만의 설정을 적용  
-   - 설정을 재사용 가능하게 만들어 이후 프로젝트에서 **포크**를 활용할 수 있도록 최적화  
+   - 설정을 재사용 가능하게 만들어 이후 프로젝트에서 포크를 활용할 수 있도록 최적화  
 
 2. **GitHub 기능 습득**  
    - 깃 이슈, Pull Request (PR), Actions 등의 기능을 활용하여 효율적인 협업 프로세스 적용  
@@ -54,6 +59,9 @@
 </br>
 
 ## 구현 기능
+
+[블로그 정리](https://jongseoung.tistory.com/tag/initialize_django)
+
 ### AUTH
 > JWT를 이용하여 인증 및 권한 관리
 
@@ -105,9 +113,14 @@
 </br> RESPONSE를 사용중이므로 현재 비활성화 상태 -> 설정에서 비활성화 하였습니다.
 
 ### CUSTOM JWT TOKEN
+[미들 웨어](https://github.com/jong-seoung/initialize_DRF/blob/a32bb1fab9457ae1288b2c09d0b3fe0f4eb6cee1/core/middlewares.py#L9)
+</br>
+[백엔드](https://github.com/jong-seoung/initialize_DRF/blob/a32bb1fab9457ae1288b2c09d0b3fe0f4eb6cee1/core/backends.py#L14)
+</br>
+[토큰 발급 및 블랙리스트 등록](https://github.com/jong-seoung/initialize_DRF/blob/main/core/serializers.py)
 > 기본적인 JWT 토큰 외에, 프로젝트 요구사항에 맞는 커스텀 JWT 토큰 기능을 구현
 </br> 토큰의 유효 기간, 클레임, 시크릿 키 등을 설정하고, 토큰 갱신 기능
-</br> 토큰 검증 절차를 강화하여 보안성을 높이고, 토큰과 관련된 각종 예외 상황을 처리합니다.
+</br> 인증 백엔드, 미들웨어, 토큰 발급, 블랙리스트 구현
 
 ### SWAGGER
 [Swagger Settings](https://github.com/BackDjango/initialize_django_jongseoung/tree/main/config/settings/swagger)
@@ -116,6 +129,7 @@
 
 ### GITHUB
 [이슈](https://github.com/BackDjango/initialize_django_jongseoung/issues?q=is%3Aissue+is%3Aclosed)
+</br>
 [PR](https://github.com/BackDjango/initialize_django_jongseoung/pulls?q=is%3Apr+is%3Aclosed)
 > Pre-commit 설정
 </br>Issues 관리
